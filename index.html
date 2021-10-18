@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--CSS-->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Aplicacion Presupuesto</title>
+</head>
+
+<body onload="cargarApp()">
+    <!--Cabecero starts-->
+    <div class="cabecero">
+        <div class="presupuesto">
+            <div class="presupuesto__titulo">Presupuesto Disponible</div>
+            <div class="presupuesto__valor" id="presupuesto">+ 2,000</div>
+            <div class="presupuesto__ingreso limpiarEstilos">
+                <div class="presupuesto__ingreso--texto">Ingresos</div>
+                <div class="derecha">
+                    <div class="presupuesto__ingreso--valor" id="ingresos">
+                        +4,000.00
+                    </div>
+                    <div class="presupuesto__ingreso--porcentaje">&nbsp;</div>
+                </div>
+            </div>
+            <div class="presupuesto__egreso limpiarEstilos">
+                <div class="presupuesto__egreso--texto" id="egresos">Egresos</div>
+                <div class="derecha limpiarEstilos">
+                    <div class="presupuesto__egreso--valor">- 1,900.00</div>
+                    <div class="presupuesto__egreso--porcentaje" id="porcentaje">
+                        45%
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Cabecero ends-->
+    <!--Formulario starts-->
+    <form action="" id="forma" onsubmit="return false">
+        <div class="agregar">
+            <div class="agregar__contenedor">
+                <select name="" id="tipo" class="agregar__tipo">
+                    <option value="ingreso" selected>+</option>
+                    <option value="egreso">-</option>
+                </select>
+                <input type="text" class="agregar__descripcion" placeholder="Agregar Descripcion" id="descripcion" />
+                <input type="number" class="agregar__valor" placeholder="valor" id="valor" step="any" />
+                <button class="agregar__btn" onclick="agregarDato()">
+                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                </button>
+            </div>
+        </div>
+    </form>
+
+    <!--Formulario ends-->
+    <!--contenedor ingreso starts-->
+    <div class="contenedor limpiarEstilos">
+        <div class="ingreso">
+            <h2 class="ingreso__titulo">Ingreso</h2>
+            <div id="lista-ingresos"></div>
+        </div>
+        <div class="egreso">
+            <h2 class="egreso__titulo">Egresos</h2>
+            <div id="lista-egresos">
+                <div class="elemento limpiarEstilos">
+                    <div class="elemento__descripcion">Renta</div>
+                    <div class="derecha limpiarEstilos">
+                        <div class="elemento__valor">- 9,000.00</div>
+                        <div class="elemento__porcentaje">21%</div>
+                        <div class="elemento__eliminar">
+                            <button class="elemento__eliminar--btn">
+                                <ion-icon name="close-circle-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--contenedor ingreso ends-->
+    <!--Scripts JS-->
+    <script src="assets/js/Dato.js"></script>
+    <script src="assets/js/Ingreso.js"></script>
+    <script src="assets/js/Egreso.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!--Ionic Icons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
