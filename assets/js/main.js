@@ -1,7 +1,7 @@
 //arreglos para almacenar los ingresos, egresos
-const ingresos = [new Ingreso("Sueldos", 2220.1), new Ingreso("Venta", 1500.0)];
+const ingresos = [new Ingreso("Sueldos", 2220.1)];
 
-const egresos = [new Egreso("Pago", 1500.0), new Egreso("agua", 500)];
+const egresos = [new Egreso("Pago", 1500.0)];
 
 //creo una funcion que cargue con el body
 let cargarApp = () => {
